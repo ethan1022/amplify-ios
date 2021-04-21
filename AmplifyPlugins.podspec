@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/aws-amplify/amplify-ios'
   s.license      = 'Apache License, Version 2.0'
   s.author       = { 'Amazon Web Services' => 'amazonwebservices' }
-  s.source       = { :git => 'https://github.com/ethan1022/amplify-ios.git', :tag => $AMPLIFY_RELEASE_TAG }
+  s.source       = { :git => 'https://github.com/aws-amplify/amplify-ios.git', :tag => $AMPLIFY_RELEASE_TAG }
 
   s.platform = :ios, '11.0'
   s.swift_version = '5.0'
@@ -45,7 +45,7 @@ Pod::Spec.new do |s|
 
     # This is technically redundant, but adding it here allows Xcode to find it
     # during initial indexing and prevent build errors after a fresh install
-    ss.dependency 'AWSAuthCore', "~> 1.8.1"
+    ss.dependency 'AWSAuthCore', $OPTIMISTIC_AWS_SDK_VERSION
     ss.dependency 'AWSCognitoIdentityProvider', $OPTIMISTIC_AWS_SDK_VERSION
     ss.dependency 'AWSCognitoIdentityProviderASF', $OPTIMISTIC_AWS_SDK_VERSION
   end
