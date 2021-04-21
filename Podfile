@@ -27,7 +27,7 @@ target "Amplify" do
     inherit! :complete
     use_frameworks!
 
-    pod "AWSCore", $OPTIMISTIC_AWS_SDK_VERSION
+    pod "AWSCore", :git => 'https://github.com/ethan1022/aws-sdk-ios.git', :branch => 'main'
 
     abstract_target "AWSPluginsTestConfigs" do
       include_test_utilities!
